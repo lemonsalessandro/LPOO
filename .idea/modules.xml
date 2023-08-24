@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio1/Exercicio1.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio1/Exercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio2/Exercicio2.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio2/Exercicio2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Lógica de Programação Orientada a Objetos.iml" filepath="$PROJECT_DIR$/.idea/Lógica de Programação Orientada a Objetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Objetivo 1 - Avaliacao/Objetivo 1 - Avaliacao.iml" filepath="$PROJECT_DIR$/Objetivo 1 - Avaliacao/Objetivo 1 - Avaliacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Objetivo1-Avaliacao/Objetivo1-Avaliacao.iml" filepath="$PROJECT_DIR$/Objetivo1-Avaliacao/Objetivo1-Avaliacao.iml" />
+    </modules>
+  </component>
+</project>

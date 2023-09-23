@@ -6,22 +6,19 @@ import java.util.*;
 
 public class alunoController {
     public static void main(String[] args) {
+
+        //CONSTRUTOR VAZIO
         Aluno aluno1 = new Aluno();
         Aluno aluno2 = new Aluno();
+
+        //CONSTRUTOR PARAMETRIZADO
         Aluno aluno3 = new Aluno(3, 3456, "José", "Silva", "bruno@gmail.com");
         Aluno aluno4 = new Aluno(4, 4567, "Maria", "Silva", "maria@gmail.com");
-        Aluno aluno5 = new Aluno();
-        Aluno aluno6 = new Aluno();
 
+        //CONSTRUTOR 2 PARAMETROS
+        Aluno aluno5 = new Aluno(5, "mariana@gmail.com");
+        Aluno aluno6 = new Aluno(6, "douglas@gmail.com");
 
-        //GETTER E SETTER DAS INSTÂNCIAS COM 2 PARÂMETROS
-        //ALUNO 5
-        aluno5.setId(5);
-        aluno5.setEmail("mariana@gmail.com");
-
-        //ALUNO 6
-        aluno6.setId(6);
-        aluno6.setEmail("douglas@gmail.com");;
 
         //TO STRING
         System.out.println("TO STRING");
@@ -79,12 +76,10 @@ public class alunoController {
        System.out.println("Aluno ID 5 LIST: " + alunoId5);
 
 
-
         //LIST COM ORDEM DESCRESCENTE
         alunosList.sort(Comparator.comparing(Aluno::getId).reversed());
         System.out.println("\nLIST EM ORDEM DECRESCENTE");
         System.out.println(alunosList);
-
 
         //MAP
         System.out.println("\nALUNOS MAP");

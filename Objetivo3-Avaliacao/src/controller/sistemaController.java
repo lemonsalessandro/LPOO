@@ -5,7 +5,7 @@ import model.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class itemPedidoController {
+public class sistemaController {
 
     public static void main(String[] args) {
 

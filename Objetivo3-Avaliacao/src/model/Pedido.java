@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class Pedido {
@@ -80,8 +79,15 @@ public class Pedido {
     }
 
     public void adicionaItem(Item item) {
+        try {
+            if (item.getProduto().getQuantidade() < item.getQuantidade()) {
+                throw new EstoqueInsuficienteException();
+            }
             this.itens.add(item);
             item.getProduto().setQuantidade(item.getProduto().getQuantidade() - item.getQuantidade());
+        } catch (EstoqueInsuficienteException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     public void removeItem(Item item) {

@@ -1,7 +1,8 @@
 package model;
 
+import exception.EstoqueInsuficienteException;
+
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class Pedido {
@@ -80,13 +81,24 @@ public class Pedido {
     }
 
     public void adicionaItem(Item item) {
-            this.itens.add(item);
-            item.getProduto().setQuantidade(item.getProduto().getQuantidade() - item.getQuantidade());
+        try {
+            if (item.getProduto().getQuantidade() < item.getQuantidade()) {
+                throw new EstoqueInsuficienteException();
+            } else {
+                this.itens.add(item);
+                item.getProduto().setQuantidade(item.getProduto().getQuantidade() - item.getQuantidade());
+                this.valor += item.getValorFinal();
+            }
+        } catch (EstoqueInsuficienteException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     public void removeItem(Item item) {
         this.itens.remove(item);
         item.getProduto().setQuantidade(item.getProduto().getQuantidade() + item.getQuantidade());
+        this.valor -= item.getValorFinal();
+
     }
 
     @Override
